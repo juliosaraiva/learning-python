@@ -1,9 +1,19 @@
-from hr import PayrollSystem
-from productivity import ProductivitySystem
-from employees import EmployeeDatabase
+import json
+
+from hr import calculate_payroll
+from productivity import track
+from employees import employee_database, Employee
 
 
-employee_database = EmployeeDatabase()
+def print_dict(d):
+    print(json.dumps(d, indent=2))
+
+
 employees = employee_database.employees
-ProductivitySystem().track(employees, 40)
-PayrollSystem().calculate_payroll(employees)
+
+track(employees, 40)
+calculate_payroll(employees)
+
+temp_secretary = Employee(5)
+print('Temporary Secretary')
+print_dict(temp_secretary.to_dict())
