@@ -7,6 +7,9 @@ authors = ["Julio Saraiva <contato@juliosaraiva.com.br>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 Pillow = "^8.0.1"
+PyPDF2 = "^1.26.0"
+PyMuPDF = "^1.18.4"
+reportlab = "^3.5.55"
 
 [tool.poetry.dev-dependencies]
 
