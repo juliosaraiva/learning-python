@@ -1,0 +1,26 @@
+name: heroku
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  run:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    env:
+      OS: ${{ matrix.os }}
+      PYTHON: '3.8'
+    steps:
+      - uses: actions/checkout@master
+      run: |
+        cd webserver
+      - name: Deploy to Heroku
+        uses: AkhileshNS/heroku-deploy@v3.6.8
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: "julinux-portifolio"
+          heroku_email: "contato@juliosaraiva.com.br"
