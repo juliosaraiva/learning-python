@@ -17,14 +17,13 @@
   
   <title>Title page</title>
   
-  <link href="{{ url_for('static', filename='/css/main.d8e0d294.css') }}" rel="stylesheet">
-  <link href="{{ url_for('static', filename='/css/style.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/main.d8e0d294.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
   </head>
   
   <body class="">
   
     <!-- Add your content of header -->
-    <div class="background-color-layer" style="background-image: url('/assets/images/img-01.jpg')"></div>
     <main class="content-wrapper">
       <header class="white-text-container section-container">
         <div class="text-center">
@@ -266,15 +265,15 @@
             <div class="card">
               <div class="card-block">
                 <h2>Contact</h2>
-                <form action="" class="reveal-content">
+                <form action="/submit_form" method="POST" class="reveal-content">
                   <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Email">
+                    <input name="email" type="email" class="form-control" id="email" placeholder="Email">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                    <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject">
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control" rows="5" placeholder="Enter your message"></textarea>
+                    <textarea name="message" class="form-control" rows="5" placeholder="Enter your message"></textarea>
                   </div>
                   <div class="form-group">
                     <button type="submit" class=" btn btn-primary">Send message</button>
