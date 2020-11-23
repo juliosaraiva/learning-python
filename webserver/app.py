@@ -3,10 +3,5 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_world():
+def home():
     return render_template('index.html')
-
-
-@app.route('/blog')
-def my_blog():
-    return 'This is my blog'

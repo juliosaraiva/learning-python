@@ -1,0 +1,7 @@
+.bio-skills {
+    list-style: none;
+}
+
+.bio-skills li span {
+    padding-left: 15px;
+}
