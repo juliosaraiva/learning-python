@@ -22,3 +22,7 @@ def submit_form():
         return data
     else:
         return 'Something wrong Happened!'
+
+
+if __name__ == '__main__':
+    app.run()
