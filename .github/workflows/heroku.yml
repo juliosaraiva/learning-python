@@ -21,4 +21,4 @@ jobs:
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "julinux-portifolio"
-          heroku_email: "contato@juliosaraiva.com.br"
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
