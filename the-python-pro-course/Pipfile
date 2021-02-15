@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 folium = "*"
+pytz = "*"
+timezonefinder = "*"
+sunnyday = "*"
 
 [dev-packages]
 
