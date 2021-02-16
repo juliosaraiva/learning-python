@@ -3,9 +3,11 @@ from datetime import datetime
 from pytz import timezone
 from timezonefinder import TimezoneFinder
 from sunnyday import Weather
+from folium import Marker
 
-class GeoPoint:
-    def __init__(self, latitude, longitude):
+class GeoPoint(Marker):
+    def __init__(self, latitude, longitude, popup=None):
+        super().__init__(location=[latitude, longitude], popup=popup)
         self.latitude = latitude
         self.longitude = longitude
 
@@ -23,7 +25,7 @@ class GeoPoint:
     def get_weather(self):
         weather = Weather(apikey='26631f0f41b95fb9f5ac0df9a8f43c92', lat=self.latitude, lon=self.longitude)
         return weather.next_12h_simplified()
-    
+
     @classmethod
     def random(cls):
         latitude = uniform(-90, 90)
